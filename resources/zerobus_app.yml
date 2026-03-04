@@ -1,0 +1,11 @@
+resources:
+  apps:
+    zerobus_app:
+      name: zerobus-demo-app
+      description: "Live dashboard for Zerobus ingestion demo"
+      source_code_path: ../src/app
+      resources:
+        - name: sql-warehouse
+          sql_warehouse:
+            id: ${var.sql_warehouse_id}
+            permission: CAN_USE

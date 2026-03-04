@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    setup_table:
+      name: zerobus-demo-setup
+      description: "Creates schema, table, and grants for the Zerobus demo"
+      tasks:
+        - task_key: setup_table
+          notebook_task:
+            notebook_path: ../src/notebooks/setup_table.ipynb
+            source: WORKSPACE
+            base_parameters:
+              service_principal_client_id: ${var.service_principal_client_id}
+          environment_key: default
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "4"

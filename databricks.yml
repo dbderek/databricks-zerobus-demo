@@ -1,0 +1,19 @@
+bundle:
+  name: zerobus-demo
+
+include:
+  - resources/*.yml
+
+variables:
+  service_principal_client_id:
+    description: "Service principal client ID for Zerobus table access"
+    default: "<service-principal-client-id>"
+  sql_warehouse_id:
+    description: "SQL warehouse ID for the Streamlit app"
+    default: "<sql-warehouse-id>"
+
+targets:
+  dev:
+    default: true
+    workspace:
+      profile: <destination-databricks-cli-profile>

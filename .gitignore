@@ -1,0 +1,21 @@
+# Hidden directories
+.**/
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated protobuf
+*_pb2.py
+
+# mcp
+.mcp.json
+
+# Claude
+CLAUDE.md
+
+# project plan
+projectplan.md
